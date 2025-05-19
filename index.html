@@ -23,7 +23,7 @@
 
 
   <title>Pretraining Large Brain Language Model for Active BCI: Silent Speech</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/brain-machine-interface.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -81,6 +81,18 @@
                       </a>
                     </span>
 
+
+                    <span class="link-block">
+                      <a href="https://studentutsedu-my.sharepoint.com/:f:/g/personal/jinzhao_zhou_student_uts_edu_au/EnO8p1e5y6pNntq0O3o-N6UBmkVL11s8TonrUUg70QjoKw?e=BpdIGy" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Dataset Teaser</span>
+                    </a>
+                  </span>
+
+
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
@@ -115,9 +127,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/main_structure.png" alt="LBLM Architecture" />
+      <img src="static/images/cover_v9.jpg" alt="LBLM Architecture" />
       <h2 class="subtitle has-text-centered">
-        Overview of the LBLM architecture, showing the Gated Conformer Backbone and Spatial Temporal Classifier components for silent speech decoding.
+        The proposed of silent speech active BCI paradigm. Users' neural activity captured during silent articulations is decoded into words to enable more natural communication. 
       </h2>
     </div>
   </div>
@@ -132,13 +144,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This paper explores silent speech decoding in active brain-computer interface (BCI) systems, which offers more natural and flexible communication than traditional BCI applications. To overcome the reliance on external stimuli in passive BCI settings, we collected a new silent speech dataset of over 120 hours of electroencephalogram (EEG) recordings from 12 subjects, capturing 24 commonly used English words for pretraining and decoding. Following recent trend of pretraining large models with self-supervised paradigms to enhance representation learning, we propose the Large Brain Language Model (LBLM) pretrained for decoding silent speech for active BCI.
+            This paper explores silent speech decoding in active brain-computer interface (BCI) systems, which offer more natural and flexible communication than traditional BCI applications. We collected a new silent speech dataset of over 120 hours of electroencephalogram (EEG) recordings from 12 subjects, capturing 24 commonly used English words for language model pretraining and decoding. Following the recent success of pretraining large models with self-supervised paradigms to enhance EEG classification performance, we propose Large Brain Language Model (LBLM) pretrained to decode silent speech for active BCI. 
           </p>
           <p>
-            To train LBLM, we propose Spectro-Temporal Predictive (STP) pretraining, a novel self-supervised approach for learning EEG representations. Unlike existing EEG pretraining in a single domain, our proposed STP method employs autoregressive modeling in the spatio-temporal domain, capturing both temporal transitions and frequency variations from the EEG signal. After pretraining, we finetune the LBLM backbone on downstream tasks, including word-level and semantic-group classification, using a spatio-temporal classifier to integrate learned representations across EEG channels.
+            To pretrain LBLM, we propose Future Spectro-Temporal Prediction (FSTP) pretraining paradigm to learn effective representations from unlabeled EEG data. Unlike existing EEG pretraining methods that mainly follow a masked-reconstruction paradigm, our proposed FSTP method employs autoregressive modeling in temporal and frequency domains to capture both temporal and spectral dependencies from EEG signals. After pretraining, we finetune our LBLM on downstream tasks, including word-level and semantic-level classification.
           </p>
           <p>
-            Extensive experiments demonstrate significant performance gains of LBLM over baseline models. In a challenging cross-session setting, our model achieves 42.8% accuracy in semantic classification and 39.6% in word-level classification on average, outperforming baseline methods by 4.6% and 7.3%, respectively. Our results highlight the feasibility of silent speech decoding in active BCI systems, paving the way for more natural and practical brain-to-text communications.
+            Extensive experiments demonstrate significant performance gains of the LBLM over fully-supervised and pretrained baseline models. For instance, in the difficult cross-session setting, our model achieves 47.0% accuracy on semantic-level classification and 39.6\% in word-level classification, outperforming baseline methods by 5.4% and 7.3%, respectively. Our research advances silent speech decoding in active BCI systems, offering an innovative solution for EEG language model pretraining and a new dataset for fundamental research. 
           </p>
         </div>
       </div>
@@ -154,29 +166,17 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <img src="static/images/carousel1.jpg" alt="MEM Pretraining"/>
+        <img src="static/images/silent_speech_main_v5.png" alt="MEM Pretraining"/>
         <h2 class="subtitle has-text-centered">
-          (A) MEM Pretraining: LBLM backbone with patching and unpatching operations for EEG representation learning.
+          (A) Overview of the LBLM architecture, showing the Gated Conformer Backbone and Spatial Temporal Classifier components for silent speech decoding.
         </h2>
       </div>
       <div class="item">
-        <img src="static/images/carousel2.jpg" alt="STP Pretraining"/>
+        <img src="static/images/ExperimentPhoto.png" alt="STP Pretraining"/>
         <h2 class="subtitle has-text-centered">
-          (B) STP Pretraining: Novel self-supervised approach capturing both temporal transitions and frequency variations.
+          (B) Silent speech experiment environment. Participants were comfortably seated on a chair in front of a monitor.
         </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="Classification"/>
-        <h2 class="subtitle has-text-centered">
-          (C) Classification: Spatio-temporal classifier for word-level and semantic-group classification tasks.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel4.jpg" alt="Masking Strategies"/>
-        <h2 class="subtitle has-text-centered">
-          Comparison of Random and Causal Masking strategies in MEM and STP pretraining.
-        </h2>
-      </div>
+      </div>      
   </div>
 </div>
 </div>
@@ -187,49 +187,50 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- Paper video. -->
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
+      
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
+        <div class="column is-four-fifths">          
           <div class="publication-video">
-            <!-- Youtube embed code here -->
+            
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
+<!-- Youtube embed code here -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- Your video file here -->
+<!-- Your video file here -->
+<!-- Your video file here -->
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+          <video poster="" id="video1" autoplay controls muted loop height="100%">            
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+          <video poster="" id="video2" autoplay controls muted loop height="100%">            
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\            
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -237,23 +238,17 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
-
-
-
-
 
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <h2 class="title">Dataset</h2>
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>         -->
+       <p> We are currently releasing a teaser dataset, which is a subset of the full collection and includes data from a single subject. Due to privacy considerations, access to the complete dataset requires signing an End-User License Agreement (EULA). Details on how to apply for and access the full dataset will be made available soon. </p>
       </div>
     </div>
   </section>
@@ -261,12 +256,12 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
