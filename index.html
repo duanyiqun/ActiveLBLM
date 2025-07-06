@@ -51,16 +51,33 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Pretraining Large Brain Language Model for Active BCI: Silent Speech</h1>
+            <h2 class="subtitle is-4 publication-title">ACM MM 2025</h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="#" target="_blank">Jinzhao Zhou</a>,</span>
                 <span class="author-block">
-                  <a href="#" target="_blank">Yiqun Duan</a>,</span>
+                  <a href="#" target="_blank">Zehong Cao</a>,</span>
                   <span class="author-block">
-                    <a href="#" target="_blank">Jimmy Cao</a>,</span>
+                    <a href="#" target="_blank">Yiqun Duan</a>,</span>
                   <span class="author-block">
-                    <a href="#" target="_blank">Chin-Teng Lin</a>
+                    <a href="#" target="_blank">Connor Barkley</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Daniel Leong</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Xiaowei Jiang</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Quoc-Toan Nguyen</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Ziyi Zhao</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Thomas Do</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Yu-Cheng Chang</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Sheng-Fu Liang</a>,</span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Chin-teng Lin</a>
                   </span>
                   </div>
 
@@ -83,12 +100,12 @@
 
 
                     <span class="link-block">
-                      <a href="https://studentutsedu-my.sharepoint.com/:f:/g/personal/jinzhao_zhou_student_uts_edu_au/EnO8p1e5y6pNntq0O3o-N6UBmkVL11s8TonrUUg70QjoKw?e=BpdIGy" target="_blank"
+                      <a href="https://studentutsedu-my.sharepoint.com/personal/jinzhao_zhou_student_uts_edu_au/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjinzhao%5Fzhou%5Fstudent%5Futs%5Fedu%5Fau%2FDocuments%2FUTS%5FSilentSpeech%5FEEG&ga=1" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Dataset Teaser</span>
+                      <span>Full Dataset</span>
                     </a>
                   </span>
 
@@ -106,12 +123,12 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="#" target="_blank"
+                    <a href="https://github.com/IDoMathEveryDay/SilentSpeechActiveBCISystem-Pretraining" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (Coming Soon!)</span>
+                    <span>Code</span>
                   </a>
                 </span>
             </div>
@@ -127,7 +144,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/cover_v9.jpg" alt="LBLM Architecture" />
+      <img src="DemoVideo/cover.png" alt="MindSpeak Silent Speech BCI System Overview" />
       <h2 class="subtitle has-text-centered">
         The proposed of silent speech active BCI paradigm. Users' neural activity captured during silent articulations is decoded into words to enable more natural communication. 
       </h2>
@@ -135,6 +152,29 @@
   </div>
 </section>
 <!-- End teaser figure -->
+
+<!-- Demo Video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered" style="color: #4a4a4a; margin-bottom: 1.5rem; font-weight: 500;">Demo Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-fifths">
+          <div class="publication-video" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <video id="demo-video" controls preload="auto" width="100%" poster="static/images/ExperimentPhoto.png">
+              <source src="DemoVideo/MindSpeak_A_Realtime_SilentSpeech_BCI_System_480p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <h2 class="subtitle is-6 has-text-centered" style="margin-top: 1rem; color: #666;">
+            Demo of our Silent Speech BCI System in action.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Demo Video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -163,23 +203,37 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4 has-text-centered" style="color: #4a4a4a; margin-bottom: 1.5rem; font-weight: 500;">Model Architecture</h2>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/silent_speech_main_v5.png" alt="MEM Pretraining"/>
-        <h2 class="subtitle has-text-centered">
-          (A) Overview of the LBLM architecture, showing the Gated Conformer Backbone and Spatial Temporal Classifier components for silent speech decoding.
-        </h2>
+        <div class="item">
+          <div class="columns is-mobile is-centered">
+            <div class="column">
+              <img src="static/images/gated_conformer.png" alt="Gated Conformer Backbone" style="width: 100%; height: auto;"/>
+            </div>
+            <div class="column">
+              <img src="static/images/input_structure.png" alt="Experiment Protocol" style="width: 100%; height: auto;"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
+            Left: Gated Conformer Backbone architecture. Right: Silent speech experiment protocol.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/silent_speech_main_v5.png" alt="LBLM Architecture"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
+            Overview of the LBLM architecture, showing the Gated Conformer Backbone and Spatial Temporal Classifier components.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/ExperimentPhoto.png" alt="Experiment Environment"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.9rem;">
+            Silent speech experiment environment. Participants were comfortably seated on a chair in front of a monitor.
+          </h2>
+        </div>      
       </div>
-      <div class="item">
-        <img src="static/images/ExperimentPhoto.png" alt="STP Pretraining"/>
-        <h2 class="subtitle has-text-centered">
-          (B) Silent speech experiment environment. Participants were comfortably seated on a chair in front of a monitor.
-        </h2>
-      </div>      
+    </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
@@ -245,10 +299,19 @@
 <!-- Paper poster -->
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop content">
       <h2 class="title">Dataset</h2>
       <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>         -->
-       <p> We are currently releasing a teaser dataset, which is a subset of the full collection and includes data from a single subject. Due to privacy considerations, access to the complete dataset requires signing an End-User License Agreement (EULA). Details on how to apply for and access the full dataset will be made available soon. </p>
+      <p>Our dataset consists of EEG recordings from 12 subjects, totaling approximately 120 hours of data as mentioned in our paper. The dataset structure for each subject follows this format:</p>
+      <pre><code>S05
+ ┣ sess1.set
+ ┣ sess2.set
+ ┣ ...
+</code></pre>
+      <h3 class="subtitle">Accessibility</h3>
+      <p>We have made data from one subject accessible as teaser data: <a href="https://studentutsedu-my.sharepoint.com/:f:/g/personal/jinzhao_zhou_student_uts_edu_au/EnO8p1e5y6pNntq0O3o-N6UBmkVL11s8TonrUUg70QjoKw?e=iTQ9Wa" target="_blank">Teaser Dataset</a></p>
+      <p>The full dataset is available at: <a href="https://studentutsedu-my.sharepoint.com/:f:/g/personal/jinzhao_zhou_student_uts_edu_au/EgTJapiEBEtDizaC3-TojmcBM5NdL1Yk9VAut-1RrAx2Kg?e=lWh7OR" target="_blank">Full Dataset</a></p>
+      <p>To download the full dataset, an End User Licence Agreement (EULA) form will be required from the user. Which will be released soon.</p>
       </div>
     </div>
   </section>
@@ -256,12 +319,21 @@
 
 
 <!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <p>This paper has been accepted to ACM MM 2025.</p>
+      <pre><code>@misc{zhou2025pretraininglargebrainlanguage, 
+       title={Pretraining Large Brain Language Model for Active BCI: Silent Speech}, 
+       author={Jinzhao Zhou and Zehong Cao and Yiqun Duan and Connor Barkley and Daniel Leong and Xiaowei Jiang and Quoc-Toan Nguyen and Ziyi Zhao and Thomas Do and Yu-Cheng Chang and Sheng-Fu Liang and Chin-teng Lin}, 
+       year={2025}, 
+       eprint={2504.21214}, 
+       archivePrefix={arXiv}, 
+       primaryClass={cs.CL}, 
+       url={https://arxiv.org/abs/2504.21214}, 
+}</code></pre>
     </div>
-</section> -->
+</section>
 <!--End BibTex citation -->
 
 
@@ -270,13 +342,7 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+          <!-- Footer content removed as requested -->
         </div>
       </div>
     </div>
